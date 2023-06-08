@@ -94,7 +94,7 @@ async def amireallyalive(event):
         )
 
 
-temp = """{}
+temp = """
 **❏ ᴅᴀᴛᴀʙᴀsᴇ ** `{dbhealth}`
 **├ ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ** `{telever}`
 **├ ᴜsᴇʀʙᴏᴛ ᴠᴇʀsɪᴏɴ ** `{catver}`
