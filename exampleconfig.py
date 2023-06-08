@@ -33,7 +33,5 @@ class Development(Config):
     FBAN_GROUP_ID = -1001911043901
     #sjsjjs
     PRIVATE_CHANNEL_BOT_API_ID = -1001911043901
-    #sjhs
-    OWNER_ID = "2079755654"
     #sjsj
     PM_LOGGER_GROUP_ID = -1001911043901
