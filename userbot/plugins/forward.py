@@ -42,11 +42,11 @@ async def all_groups_id(cat):
 
 
 @catub.cat_cmd(
-    pattern="copy$",
-    command=("copy", plugin_category),
+    pattern="frwd$",
+    command=("frwd", plugin_category),
     info={
         "header": "To get view counter for the message. that is will delete old message and send new message where you can see how any people saw your message",
-        "usage": "{tr}copy",
+        "usage": "{tr}frwd",
     },
 )
 async def _(event):
@@ -63,8 +63,8 @@ async def _(event):
     else:
         re_message = await event.get_reply_message()
         # https://t.me/telethonofftopic/78166
-        cpy_message = await event.client.forward_messages(e, re_message, silent=True)
-        await event.client.forward_messages(event.chat_id, cpy_message)
+        fwd_message = await event.client.forward_messages(e, re_message, silent=True)
+        await event.client.forward_messages(event.chat_id, fwd_message)
         try:
             await event.delete()
         except Exception as e:
