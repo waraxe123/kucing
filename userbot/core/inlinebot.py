@@ -79,7 +79,7 @@ def main_menu():
                 ),
             ),
             (
-                (Button.inline("info", data="check"),
+                Button.inline("info", data="check"),
                 Button.inline("close", data="close"),
             ),
         ]
