@@ -100,7 +100,7 @@ temp = """
 **├ ᴜsᴇʀʙᴏᴛ ᴠᴇʀsɪᴏɴ ** `{catver}`
 **├ ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ** `{pyver}`
 **├ ᴜᴘᴛɪᴍᴇ ** `{uptime}`
-**╰ ᴍᴀsᴛᴇʀ {mention}"""
+╰ ᴍᴀsᴛᴇʀ {mention}"""
 
 
 def catalive_text():
