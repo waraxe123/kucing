@@ -54,28 +54,28 @@ def main_menu():
         \n╰ ᴘʀᴏᴠɪᴅᴇᴅ ʙʏ {mention}"
     buttons = [
         (
-            Button.inline(f"admin {len(['admin'])}", data="admin_menu"),
-            Button.inline(f"bot {len(['bot'])}", data="bot_menu"),
+            Button.inline(f"admin {len['admin']}", data="admin_menu"),
+            Button.inline(f"bot {len['bot']}", data="bot_menu"),
         ),
         (
-            Button.inline(f"fun {len(['fun'])}", data="fun_menu"),
-            Button.inline(f"misc {len(['misc'])}", data="misc_menu"),
+            Button.inline(f"fun {len['fun']}", data="fun_menu"),
+            Button.inline(f"misc {len['misc']}", data="misc_menu"),
         ),
         (
-            Button.inline(f"tools {len(['tools'])}", data="tools_menu"),
-            Button.inline(f"utils {len(['utils'])}", data="utils_menu"),
+            Button.inline(f"tools {len['tools']}", data="tools_menu"),
+            Button.inline(f"utils {len['utils']}", data="utils_menu"),
         ),
         (
-            Button.inline(f"extra {len(['extra'])}", data="extra_menu"),
+            Button.inline(f"extra {len['extra']}", data="extra_menu"),
             Button.inline("close", data="close"),
         ),
     ]
     if Config.BADCAT:
         switch_button = [
             (
-                Button.inline(f"extra {len(GRP_INFO['extra'])}", data="extra_menu"),
+                Button.inline(f"extra {len['extra']}", data="extra_menu"),
                 Button.inline(
-                    f"useless {len(GRP_INFO['useless'])}", data="useless_menu"
+                    f"useless {len['useless']}", data="useless_menu"
                 ),
             ),
             (
