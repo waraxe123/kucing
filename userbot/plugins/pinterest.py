@@ -9,9 +9,6 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest as unblock
 from telethon.tl.functions.messages import DeleteHistoryRequest
 
-plugin_category = "utils"
-
-
 try:
     import cv2
 except ImportError:
@@ -48,22 +45,21 @@ async def pntr(event):
             response = conv.wait_event(
                 events.NewMessage(incoming=True, from_users=1031952739)
             )
-            await event.client.send_message(chat, link)
+            if messages_id != []:
+                await event.client.forward_messages(chat, messages_id, event.chat_id)
+            elif message != "":
+                await event.client.send_message(conv.chat_id, message)
+            else:
+                return await edit_delete(
+                    catevent, "`I guess you have used a invalid syntax`"
+                )
             response = await response
         except YouBlockedUserError:
-            await event.client(UnblockRequest(chat))
-            await event.client.send_message(chat, link)
-            response = await response
-        if response.text.startswith("Forward"):
-            await xx.edit("`Mengunggah...`")
-        else:
-            await xx.delete()
-            await event.client.send_file(
-                event.chat_id,
-                response.message.media,
-                caption=f"**Upload By: {inline_mention(event.sender)}**",
-            )
-            await event.client.send_read_acknowledge(conv.chat_id)
-            await event.client(DeleteHistoryRequest(peer=chat, max_id=0))
-            await xx.delete()
+            return await catevent.edit("```Please unblock me (@QuotLyBot) u Nigga```")
+        await event.client.send_read_acknowledge(conv.chat_id)
+        await catevent.delete()
+        await event.client.send_message(
+            event.chat_id, response.message, reply_to=reply_to
+            
+            
         
