@@ -50,8 +50,8 @@ def get_thumb(name=None, url=None):
 
 
 def main_menu():
-    text = f"𝗖𝗮𝘁𝗨𝘀𝗲𝗿𝗯𝗼𝘁 𝗛𝗲𝗹𝗽𝗲𝗿\
-        \n𝗣𝗿𝗼𝘃𝗶𝗱𝗲𝗱 𝗯𝘆 {mention}"
+    text = f"❏ ʜᴇʟᴘ ᴍᴇɴᴜ ʜᴇʟᴘᴇʀ\
+        \n╰ ᴘʀᴏᴠɪᴅᴇᴅ ʙʏ {mention}"
     buttons = [
         (
             Button.inline(f"admin {len(GRP_INFO['admin'])}", data="admin_menu"),
@@ -705,9 +705,9 @@ async def on_plugin_callback_query_handler(event):
 async def on_plug_in_callback_query_handler(event):
     category = str(event.pattern_match.group(1).decode("UTF-8"))
     buttons = paginate_help(0, GRP_INFO[category], category)
-    text = f"**Category: **{category}\
-        \n**Total plugins :** {len(GRP_INFO[category])}\
-        \n**Total Commands:** {command_in_category(category)}"
+    text = f"**❏ ᴄᴀᴛᴇɢᴏʀʏ **{category}\
+        \n**├ ᴘʟᴜɢɪɴs ** {len(GRP_INFO[category])}\
+        \n**╰ ᴄᴏᴍᴍᴀɴᴅs** {command_in_category(category)}"
     await event.edit(text, buttons=buttons)
 
 
@@ -723,9 +723,9 @@ async def on_plug_in_callback_query_handler(event):
     pgno = int(event.pattern_match.group(3).decode("UTF-8"))
     if mtype == "plugin":
         buttons = paginate_help(pgno, GRP_INFO[category], category)
-        text = f"**Category: **`{category}`\
-            \n**Total plugins :** __{len(GRP_INFO[category])}__\
-            \n**Total Commands:** __{command_in_category(category)}__"
+        text = f"**❏ ᴄᴀᴛᴇɢᴏʀʏ **`{category}`\
+            \n**├ ᴘʟᴜɢɪɴs** __{len(GRP_INFO[category])}__\
+            \n**╰ ᴄᴏᴍᴍᴀɴᴅs** __{command_in_category(category)}__"
     else:
         category_plugins = str(event.pattern_match.group(4).decode("UTF-8"))
         category_pgno = int(event.pattern_match.group(5).decode("UTF-8"))
@@ -737,9 +737,9 @@ async def on_plug_in_callback_query_handler(event):
             category_plugins=category_plugins,
             category_pgno=category_pgno,
         )
-        text = f"**Plugin: **`{category}`\
-                \n**Category: **__{getkey(category)}__\
-                \n**Total Commands:** __{len(PLG_INFO[category])}__"
+        text = f"**plugin: **`{category}`\
+                \n**category: **__{getkey(category)}__\
+                \n**commands:** __{len(PLG_INFO[category])}__"
     await event.edit(text, buttons=buttons)
 
 
@@ -771,9 +771,9 @@ async def on_plug_in_callback_query_handler(event):
             category_plugins=category_plugins,
             category_pgno=category_pgno,
         )
-        text = f"**Plugin: **`{category}`\
-                \n**Category: **__{getkey(category)}__\
-                \n**Total Commands:** __{len(PLG_INFO[category])}__"
+        text = f"**plugin: **`{category}`\
+                \n**category: **__{getkey(category)}__\
+                \n**commands:** __{len(PLG_INFO[category])}__"
         try:
             return await event.edit(text, buttons=buttons)
         except Exception as e:
@@ -824,10 +824,10 @@ async def on_plug_in_callback_query_handler(event):
     buttons = [
         (
             Button.inline(
-                "⬅️ Back ",
+                "back ",
                 data=f"back_command_{category}_{pgno}_{category_plugins}_{category_pgno}",
             ),
-            Button.inline("⚙️ Main Menu", data="mainmenu"),
+            Button.inline("back", data="mainmenu"),
         )
     ]
     text = f"**Command :** `{tr}{cmd}`\
