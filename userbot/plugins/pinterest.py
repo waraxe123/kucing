@@ -11,17 +11,7 @@ from telethon.tl.functions.contacts import UnblockRequest as unblock
 
 plugin_category = "fun"
 
-try:
-    import cv2
-except ImportError:
-    cv2 = None
 
-try:
-    from htmlwebshot import WebShot
-except ImportError:
-    WebShot = None
-
-from . import *
 
 
 @catub.cat_cmd(
