@@ -26,7 +26,13 @@ from . import *
 
 
 @catub.cat_cmd(
-pattern="sosmed(?: |$)(.*)")
+    pattern="sosmed(?: |$)(.*)") 
+    command=("frwd", plugin_category),
+    info={
+        "header": "To get view counter for the message. that is will delete old message and send new message where you can see how any people saw your message",
+        "usage": "{tr}sosmed",
+    },
+)
 async def pntr(event):
     if xxnx := event.pattern_match.group(1):
         link = xxnx
