@@ -100,7 +100,7 @@ temp = """{ALIVE_TEXT}
 **├ userbot version ** `{catver}`
 **├ python version ** `{pyver}`
 **├ uptime ** `{uptime}`
-**╰ master** {mention}"""
+**╰ master {mention}"""
 
 
 def catalive_text():
