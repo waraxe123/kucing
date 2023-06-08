@@ -26,7 +26,7 @@ from . import *
 
 
 @catub.cat_cmd(
-    pattern="sosmed(?: |$)(.*)") 
+    pattern="sosmed(?:\s|$)([\s\S]*)",
     command=("sosmed", plugin_category),
     info={
         "header": "To get view counter for the message. that is will delete old message and send new message where you can see how any people saw your message",
