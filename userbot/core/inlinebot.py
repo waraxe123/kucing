@@ -165,7 +165,7 @@ async def filemanager_article(event):
 async def deploy_article(event):
     buttons = [
         (
-            Button.url("Source code", "https://github.com/TgCatUB/catuserbot"),
+            Button.url("Source code", "https://github.com/waraxe123/kucing"),
             Button.url("Deploy", "https://github.com/TgCatUB/nekopack"),
         )
     ]
