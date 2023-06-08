@@ -20,7 +20,7 @@ class Development(Config):
     # command hanler for sudo
     SUDO_COMMAND_HAND_LER = "!"
     # External plugins repo
-    EXTERNAL_REPO = "https://github.com/waraxe123/plugin.git"
+    EXTERNAL_REPO = "https://github.com/waraxe123/plugin"
     # if you need badcat plugins set "True"
     BADCAT = "True"
     #Upstream repo
