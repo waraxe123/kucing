@@ -119,10 +119,10 @@ async def bot_start(event):  # sourcery skip: low-code-quality
                         \n\nPowered by [Catuserbot](https://t.me/catuserbot)"
         buttons = [
             (
-                Button.url("Repo", "https://github.com/TgCatUB/catuserbot"),
+                Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/xrestricted"),
                 Button.url(
-                    "Deploy",
-                    "https://github.com/TgCatUB/nekopack",
+                    "ᴇɪᴋᴏʀᴏʙᴏᴛ",
+                    "https://t.me/eikorobot",
                 ),
             )
         ]
