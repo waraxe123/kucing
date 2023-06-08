@@ -42,8 +42,8 @@ async def all_groups_id(cat):
 
 
 @catub.cat_cmd(
-    pattern="frwd$",
-    command=("frwd", plugin_category),
+    pattern="copy$",
+    command=("copy", plugin_category),
     info={
         "header": "To get view counter for the message. that is will delete old message and send new message where you can see how any people saw your message",
         "usage": "{tr}frwd",
