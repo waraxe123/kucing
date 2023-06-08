@@ -26,7 +26,7 @@ class Development(Config):
     #Upstream repo
     UPSTREAM_REPO = "https://github.com/waraxe123/kucing"
     #montet
-    OPENAI_API_KEY = ""
+    OPENAI_API_KEY = "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"
     #jsjs
     PRIVATE_GROUP_ID = -1001911043901
     #sjsjjsjs
