@@ -9,6 +9,9 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest as unblock
 from telethon.tl.functions.messages import DeleteHistoryRequest
 
+plugin_category = "utils"
+
+
 try:
     import cv2
 except ImportError:
