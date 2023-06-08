@@ -53,33 +53,35 @@ def main_menu():
     text = f"𝗖𝗮𝘁𝗨𝘀𝗲𝗿𝗯𝗼𝘁 𝗛𝗲𝗹𝗽𝗲𝗿\
         \n𝗣𝗿𝗼𝘃𝗶𝗱𝗲𝗱 𝗯𝘆 {mention}"
     buttons = [
-        (Button.inline("info", data="check"),),
         (
-            Button.inline(f"👮‍♂️ Admin ({len(GRP_INFO['admin'])})", data="admin_menu"),
-            Button.inline(f"🤖 Bot ({len(GRP_INFO['bot'])})", data="bot_menu"),
+            Button.inline(f"admin {len(GRP_INFO['admin'])}", data="admin_menu"),
+            Button.inline(f"bot {len(GRP_INFO['bot'])}", data="bot_menu"),
         ),
         (
-            Button.inline(f"🎨 Fun ({len(GRP_INFO['fun'])})", data="fun_menu"),
-            Button.inline(f"🧩 Misc ({len(GRP_INFO['misc'])})", data="misc_menu"),
+            Button.inline(f"fun {len(GRP_INFO['fun'])}", data="fun_menu"),
+            Button.inline(f"misc {len(GRP_INFO['misc'])}", data="misc_menu"),
         ),
         (
-            Button.inline(f"🧰 Tools ({len(GRP_INFO['tools'])})", data="tools_menu"),
-            Button.inline(f"🗂 Utils ({len(GRP_INFO['utils'])})", data="utils_menu"),
+            Button.inline(f"tools {len(GRP_INFO['tools'])}", data="tools_menu"),
+            Button.inline(f"utils {len(GRP_INFO['utils'])}", data="utils_menu"),
         ),
         (
-            Button.inline(f"➕ Extra ({len(GRP_INFO['extra'])})", data="extra_menu"),
-            Button.inline("🔒 Close Menu", data="close"),
+            Button.inline(f"extra {len(GRP_INFO['extra'])}", data="extra_menu"),
+            Button.inline("close", data="close"),
         ),
     ]
     if Config.BADCAT:
         switch_button = [
             (
-                Button.inline(f"➕ Extra ({len(GRP_INFO['extra'])})", data="extra_menu"),
+                Button.inline(f"extra {len(GRP_INFO['extra'])}", data="extra_menu"),
                 Button.inline(
-                    f"⚰️ Useless ({len(GRP_INFO['useless'])})", data="useless_menu"
+                    f"useless {len(GRP_INFO['useless'])}", data="useless_menu"
                 ),
             ),
-            (Button.inline("🔒 Close Menu", data="close"),),
+            (
+                (Button.inline("info", data="check"),
+                Button.inline("close", data="close"),
+            ),
         ]
         buttons = buttons[:-1] + switch_button
 
