@@ -93,10 +93,10 @@ class CatUserBotClient(TelegramClient):
             if command[1] not in BOT_INFO:
                 BOT_INFO.append(command[1])
             try:
-                if file_test not in GRP_INFO[command[]]:
-                    GRP_INFO[command[]].append(file_test)
+                if file_test not in GRP_INFO[command[0]]:
+                    GRP_INFO[command[0]].append(file_test)
             except BaseException:
-                GRP_INFO.update({command[]]: [file_test]})
+                GRP_INFO.update({command[0]]: [file_test]})
             try:
                 if command[0] not in PLG_INFO[file_test]:
                     PLG_INFO[file_test].append(command[0])
