@@ -163,7 +163,7 @@ async def filemanager_article(event):
 
 
 async def pmpermit_article(event):
-    buttons = [Button.inline(text="Show Options.", data="show_pmpermit_options")]
+    buttons = [Button.inline(text="sʜᴏᴡ ᴏᴘᴛɪᴏɴs", data="show_pmpermit_options")]
     query = gvarstatus("PM_TEXT")
     media = None
     if PM_PIC := gvarstatus("PM_PIC"):
