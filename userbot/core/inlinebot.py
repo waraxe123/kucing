@@ -54,28 +54,28 @@ def main_menu():
         \n╰ ᴘʀᴏᴠɪᴅᴇᴅ ʙʏ {mention}"
     buttons = [
         (
-            Button.inline(f"admin {()}", data="admin_menu"),
-            Button.inline(f"bot {()}", data="bot_menu"),
+            Button.inline(f"admin", data="admin_menu"),
+            Button.inline(f"bot", data="bot_menu"),
         ),
         (
-            Button.inline(f"fun {len(['fun'])}", data="fun_menu"),
-            Button.inline(f"misc {len(['misc'])}", data="misc_menu"),
+            Button.inline(f"fun", data="fun_menu"),
+            Button.inline(f"misc", data="misc_menu"),
         ),
         (
-            Button.inline(f"tools {len(['tools'])}", data="tools_menu"),
-            Button.inline(f"utils {len(['utils'])}", data="utils_menu"),
+            Button.inline(f"tools", data="tools_menu"),
+            Button.inline(f"utils", data="utils_menu"),
         ),
         (
-            Button.inline(f"extra {len(['extra'])}", data="extra_menu"),
+            Button.inline(f"extra", data="extra_menu"),
             Button.inline("close", data="close"),
         ),
     ]
     if Config.BADCAT:
         switch_button = [
             (
-                Button.inline(f"extra {len(['extra'])}", data="extra_menu"),
+                Button.inline(f"extra", data="extra_menu"),
                 Button.inline(
-                    f"useless {len(['useless'])}", data="useless_menu"
+                    f"useless", data="useless_menu"
                 ),
             ),
             (
