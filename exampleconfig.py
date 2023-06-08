@@ -35,7 +35,3 @@ class Development(Config):
     PRIVATE_CHANNEL_BOT_API_ID = -1001911043901
     #sjsj
     PM_LOGGER_GROUP_ID = -1001911043901
-    #sjsjjsjs
-    VCMODE = True 
-    #sjjsjs 
-    VC_SESSION = "1BVtsOGYBu37nd1C5PTl3L0VmbL4fEQZxCSVlA55FikYwnfUpsX1qKYdUbHJ51OqcctQ101DxoepA8ce9V0uppjKidowvvN9lJjIqXdtu1tmH-86-w4atfM8qTWF0Hcup56WL9tWzQJpuoEdsEvmQHwr8PB8H2uGSzA40MY57bnJ5UFi_CHg5RSMh6f7DJDiGgH4DOa_jgVL9k0zQfyIzMFDrWintYENXaCXn02jYYl-JaI5ejuGHViQajaHDeCI4BKw_qGUZAId43ii8wk_5lo8gt2CsVZAj5Kgr-BIbc5AniPZAaDmaAglvMLPIk6k1lxziuJGu-8fuWXkXtvr-1RBxqLpKsts="
