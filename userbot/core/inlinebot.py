@@ -54,8 +54,8 @@ def main_menu():
         \n╰ ᴘʀᴏᴠɪᴅᴇᴅ ʙʏ {mention}"
     buttons = [
         (
-            Button.inline(f"admin {len(['admin'])}", data="admin_menu"),
-            Button.inline(f"bot {len(['bot'])}", data="bot_menu"),
+            Button.inline(f"admin {(['admin'])}", data="admin_menu"),
+            Button.inline(f"bot {(['bot'])}", data="bot_menu"),
         ),
         (
             Button.inline(f"fun {len(['fun'])}", data="fun_menu"),
