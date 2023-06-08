@@ -1,3 +1,4 @@
+htmlwebshot
 aiohttp
 apscheduler
 cinemagoer
