@@ -6,7 +6,7 @@
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from telethon.tl.functions.contacts import UnblockRequest
+from telethon.tl.functions.contacts import UnblockRequest as unblock
 from telethon.tl.functions.messages import DeleteHistoryRequest
 
 try:
@@ -42,7 +42,9 @@ async def pntr(event):
     chat = "@SaveAsbot"
     async with event.client.conversation(chat) as conv:
         try:
-            await conv.wait_event(events.NewMessage(incoming=True, from_users=523131145))
+            response = conv.wait_event(
+                events.NewMessage(incoming=True, from_users=1031952739)
+            )
             await event.client.send_message(chat, link)
             response = await response
         except YouBlockedUserError:
