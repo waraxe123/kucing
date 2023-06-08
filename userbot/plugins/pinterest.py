@@ -10,6 +10,10 @@ from telethon.tl.functions.contacts import UnblockRequest as unblock
 from telethon.tl.functions.messages import DeleteHistoryRequest
 
 
+from userbot import Convert, catub 
+from ..helpers.utils import get_user_from_event, reply_id
+from ..core.managers import edit_delete, edit_or_reply
+
 plugin_category = "fun"
 
 try:
