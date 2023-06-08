@@ -4,16 +4,13 @@
 # This file is a part of < https://github.com/senpai80/Ayra/ >
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
-"""
-✘ **Bantuan Untuk Pinterest**
 
-๏ **Perintah:** `sosmed` <link>
-◉ **Keterangan:** Unduh tautan tiktok, Instagram, pinterest.
-"""
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest
 from telethon.tl.functions.messages import DeleteHistoryRequest
+
+plugin_category = "fun"
 
 try:
     import cv2
