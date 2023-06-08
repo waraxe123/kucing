@@ -47,12 +47,12 @@ async def pntr(event):
 
     chat = "@SaveAsBot"
 
-    catevent = await edit_or_reply(event, "``processing`")
+    catevent = await edit_or_reply(event, "`processing`")
 
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
-                events.NewMessage(incoming=True, from_users=1031952739)
+                events.NewMessage(incoming=True, from_users=523131145)
             )
             if messages_id != []:
                 await event.client.forward_messages(chat, messages_id, event.chat_id)
