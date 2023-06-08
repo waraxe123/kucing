@@ -28,7 +28,7 @@ except ImportError:
 from . import *
 
 
-@ultroid_cmd(
+@catub.cat_cmd(
 pattern="sosmed(?: |$)(.*)")
 async def pntr(event):
     if xxnx := event.pattern_match.group(1):
