@@ -10,15 +10,15 @@ class Development(Config):
     # create any PostgreSQL database (i recommend to use elephantsql) and paste that link here
     DB_URI = "postgresql://postgres:roip@localhost:5432/catuserbot"
     # After cloning the repo and installing requirements do python3 stringsetup.py an fill that value with this
-    STRING_SESSION = "1BVtsOGYBu1bTQMEuc6LpiChtFbpHjXeF6Ur5AjbTSuvl4FMqMpDdzDzB89-qjRysawpfQyM2m_fDVxRV1ZVcgjABsCeYQD7VPZB8EPUaW2VACXK5N4Ut8B0j1IPmKxn0x51KI7_hIcIxMyNoDgtcE0GQwMEZjI1uIFx8Bb4QyiB8ZTOG4urOuQLwJq_poxDHz5fbssfXkVdkgQnRyybiSf3TkYXuXh-ghzGwf4exPg5EpJd-kaGuLN5aid7WIQw5MVwgRa_uCYwe9c-O22IJKzpkS1G1Sz60C2hgQJCfNLMpnNiuJo9DMhOFwfMVkhXPfz9ccFq1Hk6csqhGeUEoU3IkM4CelxI="
+    STRING_SESSION = "1BVtsOGYBu6rrPW4SA0aX5dmJroFhIi7ple3b2ZUr2MI7frnpQsqLykgks3EZ_Sinxev2yuIGTOA5nVucrUCI76hD0JRf27VOLAkYlhDHwijWAKN-vs3qhKpAe3MD7q45cb8dbrKheQ0O1x9n-1mwpBTKMEqiykmq9-jhEhYIjOn8h3QCTjNPxoCaglicKVDm4f7hxC1Z1mooHlI4qqnr1hgWhJQ3lkXxptCOItnGqmC5zHArqs8aBsbJmU2i4giJAUXi3sZS5jIPI79Depzix9Yw5EVrQgxrcM9IqVOFNw1Ci2LgjQ2zUD5iAgeb0WUCi3pUIQwXVgnqeUBainMLy2EN2oDUHwU="
     # create a new bot in @botfather and fill the following vales with bottoken
-    TG_BOT_TOKEN = "6134002800:AAHgl7NzUqg97WHC8iY7dqfFUBTmU3Gn8cI"
+    TG_BOT_TOKEN = "6033555992:AAFk8Dp0Rqfa3n4__Nb7wi3rJtRRfIwltjw"
     # create a private group and a rose bot to it and type /id and paste that id here (replace that -100 with that group id)
     PRIVATE_GROUP_BOT_API_ID = -1001911043901
     # command handler
-    COMMAND_HAND_LER = "."
+    COMMAND_HAND_LER = "!"
     # command hanler for sudo
-    SUDO_COMMAND_HAND_LER = "."
+    SUDO_COMMAND_HAND_LER = "!"
     # External plugins repo
     EXTERNAL_REPO = "https://github.com/TgCatUB/CatPlugins"
     # if you need badcat plugins set "True"
@@ -27,8 +27,6 @@ class Development(Config):
     UPSTREAM_REPO = "https://github.com/waraxe123/kucing"
     #montet
     OPENAI_API_KEY = ""
-    
-  
     #jsjs
     PRIVATE_GROUP_ID = -1001911043901
     #sjsjjsjs
