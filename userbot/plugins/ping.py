@@ -31,8 +31,8 @@ plugin_category = "tools"
 temp_ = "Pong!"
 temp = "Pong!\n`{ping} ms`"
 if Config.BADCAT:
-    temp_ = "__**☞ Pong**__"
-    temp = "__**☞ Pong**__\n➥ `{ping}` **ms**\n➥ __**Bot of **__{mention}"
+    temp_ = "__**❏ Pong**__"
+    temp = "__**❏ Pong**__\n├ `{ping}` **ms**\n╰ __**Bot of **__{mention}"
 
 
 @catub.cat_cmd(
