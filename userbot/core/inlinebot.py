@@ -50,8 +50,8 @@ def get_thumb(name=None, url=None):
 
 
 def main_menu():
-    text = f"❏ ʜᴇʟᴘ ᴍᴇɴᴜ ʜᴇʟᴘᴇʀ\
-        \n╰ ᴘʀᴏᴠɪᴅᴇᴅ ʙʏ {mention}"
+    text = f"❏ ʜᴇʟᴘ ᴍᴇɴᴜ\
+        \n╰ ᴘʀᴇғɪxᴇs `!`"
     buttons = [
         (
             Button.inline(f"admin", data="admin_menu"),
