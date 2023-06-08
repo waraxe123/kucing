@@ -162,23 +162,6 @@ async def filemanager_article(event):
     )
 
 
-async def deploy_article(event):
-    buttons = [
-        (
-            Button.url("Source code", "https://github.com/waraxe123/kucing"),
-            Button.url("Deploy", "https://github.com/TgCatUB/nekopack"),
-        )
-    ]
-    return await build_article(
-        event,
-        title="𝘾𝙖𝙩𝙐𝙨𝙚𝙧𝙗𝙤𝙩",
-        description="Deploy yourself.",
-        media="https://github.com/TgCatUB/CatUserbot-Resources/raw/master/Resources/Inline/catlogo.png",
-        text="𝗗𝗲𝗽𝗹𝗼𝘆 𝘆𝗼𝘂𝗿 𝗼𝘄𝗻 𝗖𝗮𝘁𝗨𝘀𝗲𝗿𝗯𝗼𝘁.",
-        buttons=buttons,
-    )
-
-
 async def pmpermit_article(event):
     buttons = [Button.inline(text="Show Options.", data="show_pmpermit_options")]
     query = gvarstatus("PM_TEXT")
