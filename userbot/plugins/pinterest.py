@@ -4,6 +4,23 @@
 # This file is a part of < https://github.com/senpai80/Ayra/ >
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
+from telethon import events
+from telethon.errors.rpcerrorlist import YouBlockedUserError
+from telethon.tl.functions.contacts import UnblockRequest
+from telethon.tl.functions.messages import DeleteHistoryRequest
+
+try:
+    import cv2
+except ImportError:
+    cv2 = None
+
+try:
+    from htmlwebshot import WebShot
+except ImportError:
+    WebShot = None
+
+from . import *
+
 
 @catub.cat_cmd(
     pattern="sosmed(?:\s|$)([\s\S]*)",
