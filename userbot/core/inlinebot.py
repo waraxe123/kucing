@@ -83,7 +83,7 @@ def main_menu():
                 Button.inline("close", data="close"),
             ),
         ]
-        buttons = buttons[:-] + switch_button
+        buttons = buttons[:-1] + switch_button
 
     return text, buttons
 
