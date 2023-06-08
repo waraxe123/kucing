@@ -46,7 +46,7 @@ async def all_groups_id(cat):
     command=("copy", plugin_category),
     info={
         "header": "To get view counter for the message. that is will delete old message and send new message where you can see how any people saw your message",
-        "usage": "{tr}frwd",
+        "usage": "{tr}copy",
     },
 )
 async def _(event):
