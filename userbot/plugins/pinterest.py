@@ -41,7 +41,7 @@ async def pntr(event):
     else:
         return await edit_delete(event, "`Berikan link tautan pinterest...`")
 
-    xx = await eor(event, "`Processing...`")
+    xx = await.edit("`Processing..`")
     chat = "@SaveAsbot"
     async with event.client.conversation(chat) as conv:
         try:
