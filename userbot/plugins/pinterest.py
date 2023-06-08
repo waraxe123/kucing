@@ -1,13 +1,30 @@
-# Ayra - UserBot
-# Copyright (C) 2021-2022 senpai80
-#
-# This file is a part of < https://github.com/senpai80/Ayra/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
+import io
+
+import os
+
+import re
+
+import textwrap
+
+from textwrap import wrap
+
+
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest as unblock
 
+from userbot import Convert, catub
+
+from ..core.logger import logging
+
+from ..core.managers import edit_delete, edit_or_reply
+
+from ..helpers import file_check, fontTest, media_type, process, soft_deEmojify
+
+from ..helpers.utils import get_user_from_event, reply_id 
+from telethon.utils import get_display_name
+
+LOGS = logging.getLogger(__name__)
 
 plugin_category = "fun"
 
