@@ -112,6 +112,11 @@ async def _(event):
             )
             await event.client.send_read_acknowledge(conv.chat_id)
             await catevent.delete()
+           
+
+            event.chat_id, response.message, reply_to=reply_to
+
+        )
             
         )
             
