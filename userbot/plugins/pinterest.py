@@ -107,7 +107,7 @@ async def _(event):
 
                 response.message.media,
 
-                caption=f"**Upload By: {my_mention}**",
+                caption=f"**Upload by** {_format.mentionuser('I am' ,user.id)}**",
 
             )
             await event.client.send_read_acknowledge(conv.chat_id)
