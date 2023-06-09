@@ -1,41 +1,40 @@
-"""
-✘ **Bantuan Untuk Asupan**
 
-๏ **Perintah:** `asupan`
-◉ **Keterangan:** Coba sendiri
 
-๏ **Perintah:** `bokep`
-◉ **Keterangan:** Coba sendiri
-
-๏ **Perintah:** `ayang`
-◉ **Keterangan:** Coba sendiri
-
-๏ **Perintah:** `ppcp`
-◉ **Keterangan:** Coba sendiri
-
-๏ **Perintah:** `ppcp2`
-◉ **Keterangan:** Coba sendiri
-
-๏ **Perintah:** `anime`
-◉ **Keterangan:** Coba sendiri
-
-๏ **Perintah:** `anime2`
-◉ **Keterangan:** Coba sendiri
-
-๏ **Perintah:** `pap`
-◉ **Keterangan:** Coba sendiri
-"""
 
 from secrets import choice
 
 from telethon.tl.types import InputMessagesFilterPhotos, InputMessagesFilterVideo
 
+from userbot import catub
+
+from ..core.managers import edit_delete, edit_or_reply
+
+plugin_category="fun"
+
 from . import *
 
 
-@ayra_cmd(pattern="[Aa][s][u][p][a][n]$")
+@catub.cat_cmd(
+
+    pattern="asupan(?:\s|$)([\s\S]*)",
+
+    command=("asupan", plugin_category),
+
+    info={
+
+        "header": "Just to say hi to other user.",
+
+        "description": "cokbun ae lu kontol",
+
+        "usage": "{tr}asupan <text>",
+
+        "examples": "{tr}asupan how are you doing",
+
+    },
+
+)
 async def _(event):
-    xx = await eor(event, "`Tunggu Sebentar...`")
+    xx = await edit_or_reply(event, "`Tunggu Sebentar...`")
     try:
         asupannya = [
             asupan
@@ -47,7 +46,7 @@ async def _(event):
             event.chat_id,
             file=choice(asupannya),
             reply_to=event.reply_to_msg_id,
-            caption=f"**Asupan Nya {inline_mention(event.sender)}..**",
+            
         )
         await xx.delete()
     except Exception:
