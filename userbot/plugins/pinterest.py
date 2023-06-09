@@ -87,7 +87,7 @@ async def _(event):
                 )
             response = await response
         except YouBlockedUserError:
-            return await catevent.edit("```Please unblock me (@SaveAsbot) u Nigga```")
+            return await catevent.edit("``````")
         await event.client.send_read_acknowledge(conv.chat_id)
         await catevent.delete()
         await event.client.send_message(
