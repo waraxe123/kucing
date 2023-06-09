@@ -93,10 +93,7 @@ async def _(event):
         if response.text.startswith("Forward"):
             await catevent.edit("`Mengunggah...`")
         else:
-            await catevent.delete()
-          
-                event.chat_id,
-                response.message.media
+            
             )
             await event.client.send_read_acknowledge(conv.chat_id)
             await catevent.delete() 
