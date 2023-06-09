@@ -87,10 +87,32 @@ async def _(event):
                 )
             response = await response
         except YouBlockedUserError:
-            return await catevent.edit("``````")
-        await event.client.send_read_acknowledge(conv.chat_id)
-        await catevent.delete()
-        await event.client.send_message(
+            await event.client(UnblockRequest(chat))
+
+            await event.client.send_message(chat, link)
+
+            response = await response
+
+        if response.text.startswith("Forward"):
+
+            await catevent.edit("`Mengunggah...`")
+
+        else:
+
+            await catevent.delete()
+
+            await event.client.send_file(
+
+                event.chat_id,
+
+                response.message.media,
+
+                caption=f"**Upload By: {inline_mention(event.sender)}**",
+
+            )
+            await event.client.send_read_acknowledge(conv.chat_id)
+            await catevent.delete()
+            await event.client.send_message(
             event.chat_id, response.message, reply_to=reply_to
         )
             
