@@ -68,7 +68,7 @@ async def _(event):
         messages_id.append(reply.id)
     else:
         return await edit_delete(
-            event, "`Either reply to message or give input to function properly`"
+            event, "`berikan link tautan Instagram, tiktok, pinterest`"
         )
     chat = "@SaveAsbot"
     catevent = await edit_or_reply(event, "```processing```")
@@ -86,21 +86,22 @@ async def _(event):
                     catevent, "`I guess you have used a invalid syntax`"
                 )
             response = await response
+           
+
         except YouBlockedUserError:
-            await event.client(UnblockRequest(chat))
-            await event.client.send_message(chat, link)
-            response = await response
-        if response.text.startswith("Forward"):
-            await catevent.edit("`Mengunggah...`")
-        else:
-            
-            )
-            await event.client.send_read_acknowledge(conv.chat_id)
-            await catevent.delete() 
-            await event.client.send_message(
+
+            return await catevent.edit("```Please unblock me (@QuotLyBot) u Nigga```")
+
+        await event.client.send_read_acknowledge(conv.chat_id)
+
+        await catevent.delete()
+
+        await event.client.send_message(
+
             event.chat_id, response.message, reply_to=reply_to
 
         )
+        
             
         
             
