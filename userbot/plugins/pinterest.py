@@ -94,7 +94,7 @@ async def _(event):
             await catevent.edit("`Mengunggah...`")
         else:
             await catevent.delete()
-            await event.client.send_file(
+            await event.client.send_message(
                 event.chat_id,
                 response.message.media
             )
