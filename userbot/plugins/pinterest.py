@@ -86,18 +86,11 @@ async def _(event):
                     catevent, "`I guess you have used a invalid syntax`"
                 )
             response = await response
-           
-
         except YouBlockedUserError:
-
             return await catevent.edit("```Please unblock me (@QuotLyBot) u Nigga```")
-
         await event.client.send_read_acknowledge(conv.chat_id)
-
         await catevent.delete()
-
         await event.client.send_message(
-
             event.chat_id, response.message, reply_to=reply_to
 
         )
