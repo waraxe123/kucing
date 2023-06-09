@@ -94,12 +94,13 @@ async def _(event):
             await catevent.edit("`Mengunggah...`")
         else:
             await catevent.delete()
-            await event.client.send_message(
+          
                 event.chat_id,
                 response.message.media
             )
             await event.client.send_read_acknowledge(conv.chat_id)
-            await catevent.delete()
+            await catevent.delete() 
+            await event.client.send_message(
             event.chat_id, response.message, reply_to=reply_to
 
         )
